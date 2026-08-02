@@ -13,7 +13,7 @@ public class Student {
 @Column 
 @GeneratedValue //AI 
 private int id;
-@Column
+@Column(name = "firstName", length = 200, nullable = false)
 private String fname;
 @Column
 private String lname;
@@ -51,6 +51,11 @@ public String getCollege() {
 }
 public void setCollege(String college) {
 	this.college = college;
+}
+@Override
+public String toString() {
+	return "Student [id=" + id + ", fname=" + fname + ", lname=" + lname + ", age=" + age + ", college=" + college
+			+ "]";
 }
 
 }
