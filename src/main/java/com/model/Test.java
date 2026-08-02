@@ -11,9 +11,10 @@ import org.hibernate.criterion.Restrictions;
 public class Test {
 
 	public static void main(String[] args) {
-//		add();
+		add();
 //		getAllStudents();
-		updateStudent();
+//		updateStudent();
+//		deleteStudent();
 	}
 	
 	static void add() {
@@ -57,6 +58,19 @@ public class Test {
 		session.getTransaction().commit();
 		session.close();
 	}
+	
+	// delete student
+	static void deleteStudent() {
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session session = sf.openSession();
+		session.beginTransaction();
+		
+		Student s = (Student) session.get(Student.class, 1);
+		session.delete(s); // delete sql
+		session.getTransaction().commit();
+		session.close();
+	}
+	
 }
 
 
