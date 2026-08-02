@@ -54,7 +54,7 @@ public void setCollege(String college) {
 }
 @Override
 public String toString() {
-	return "Student [id=" + id + ", fname=" + fname + ", lname=" + lname + ", age=" + age + ", college=" + college
+	return "\n Student [id=" + id + ", fname=" + fname + ", lname=" + lname + ", age=" + age + ", college=" + college
 			+ "]";
 }
 
