@@ -12,10 +12,12 @@
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
 		<!-- Entity Mapping -->
         <mapping class="com.model.Student" />
         <mapping class="com.model.Address" />
         <mapping class="com.model.Employee" />
+         <mapping class="com.model.Phone" />
+         <mapping class="com.model.Department" />
     </session-factory>
 </hibernate-configuration>
